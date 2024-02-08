@@ -11,13 +11,14 @@ export default {
   }),
   methods: {
     doSomethingRhino () {
-      let args = { location: [0, 0, 0], radius: 20 }
+      const args = { location: [0, 0, 0], radius: 20 }
       // eslint-disable-next-line
         Interop.doSomething(args)
     }
   },
   mounted () {
     EventBus.$on('SET_TEXT', (data) => {
+      // eslint-disable-next-line
       console.log('HelloWorld: ' + data)
     })
   }
